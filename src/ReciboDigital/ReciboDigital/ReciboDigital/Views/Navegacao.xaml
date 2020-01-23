@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<NavigationPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ReciboDigital.Views.Navegacao"
+             BarBackgroundColor="#4791ea" BarTextColor="White" 
+             NavigationPage.HasBackButton="False">
+    <NavigationPage.ToolbarItems>
+        <ToolbarItem  Order="Primary" Priority="2" Text="Pesquisar"/>
+    </NavigationPage.ToolbarItems>
+</NavigationPage>

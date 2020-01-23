@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:ReciboDigital.ViewModels"
+             xmlns:navigation="clr-namespace:ReciboDigital.Navigations"
+             x:Class="ReciboDigital.Views.Comecar"
+             BackgroundColor="#4791ea"
+             NavigationPage.HasBackButton="False"
+             NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.BindingContext>
+        <viewmodel:ComecarViewModel>
+            <x:Arguments>
+                <navigation:NavigationService/>
+            </x:Arguments>
+        </viewmodel:ComecarViewModel>
+    </ContentPage.BindingContext>
+
+    <StackLayout Margin="20" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Margin="0,100,0,0">
+            <Image x:Name="imgLogo" Source="logo.png" WidthRequest="230" HeightRequest="320"/>
+            <StackLayout Orientation="Horizontal">
+                <Label x:Name="lblDoki" Text="DOKI" FontSize="60" TextColor="White" FontFamily="Roboto-Italic.ttf#Roboto"/>
+                <Label x:Name="lblReciboDigital" Text="Recibo Digital" 
+                       VerticalOptions="CenterAndExpand" FontSize="Default" 
+                       TextColor="White" FontFamily="Roboto-Italic.ttf#Roboto"/>
+            </StackLayout>
+        </StackLayout>
+        <StackLayout x:Name="stkRodape" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand">
+            <Button x:Name="btnComecar" Text="Começar" TextColor="White" BackgroundColor="#123967" Command="{Binding ComecarCommand}"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
